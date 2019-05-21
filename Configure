@@ -1,0 +1,12 @@
+#!/bin/sh
+
+cp lib/libhidapi32.so /usr/lib/
+echo "Copying libhidapi32.so to /usr/lib/"
+cp lib/libhidapi-jni.so /usr/lib/
+echo "Copying libhidapi-jni.so to /usr/lib/"
+
+cp lib/55-hummingbird.rules /etc/udev/rules.d/
+cp lib/55-finch.rules /etc/udev/rules.d/
+echo "Copying finch and hummingbird udev rules"
+
+apt-get install libusb-1.0-0-dev
